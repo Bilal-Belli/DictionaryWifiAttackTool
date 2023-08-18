@@ -1,6 +1,5 @@
 def extract_words_from_file(file_path):
     words_array = []
-
     try:
         with open(file_path, 'r') as file:
             for line in file:
@@ -10,11 +9,10 @@ def extract_words_from_file(file_path):
         print("File not found.")
     except Exception as e:
         print(f"An error occurred: {e}")
-
     return words_array
 
-file_path = "Dictionnary.txt"
-words_array = extract_words_from_file(file_path)
-
-print("Words extracted from the file:")
-print(words_array)
+# For TEST
+# file_path = "Dictionnary.txt"
+# words_array = extract_words_from_file(file_path)
+# print("Words extracted from the file:")
+# print(words_array)

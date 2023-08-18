@@ -5,17 +5,14 @@ from pywifi import const
 def scan_available_networks(interface_name='wlan0'):
     wifi = pywifi.PyWiFi()
     iface = wifi.interfaces()[0]  # Use the first wireless interface, change if needed
-    
     iface.scan()
     scan_results = iface.scan_results()
-
     networks = []
     for result in scan_results:
         ssid = result.ssid
         bssid = result.bssid
         signal_strength = result.signal
         networks.append((ssid, bssid, signal_strength))
-    
     return networks
 
 def connect_to_wifi(ssid, password, interface_name='wlan0'):
