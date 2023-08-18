@@ -8,7 +8,7 @@ This repository presents a simple Python program for testing a large number of p
 - Graphical user interface (GUI).
 
 <div align="center">
-   <img  width="570" src="https://github.com/Bilal-Belli/DictionnaryWifiAttackTool/assets/74218805/a29eeadf-c224-42c6-8f50-31ec94c5046b">
+   <img width="451" alt="1" src="https://github.com/Bilal-Belli/DictionaryWifiAttackTool/assets/74218805/3f16b70a-ea01-46dc-988c-44f29a758477">
 </div>
 
 ### For Testing
