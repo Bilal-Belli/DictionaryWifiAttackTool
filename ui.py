@@ -1,5 +1,6 @@
+import threading
 import tkinter as tk
-from tkinter import filedialog
+from tkinter import filedialog,messagebox
 from script import scan_available_networks,connect_to_wifi
 from parseDictionnary import extract_words_from_file
 
@@ -16,13 +17,19 @@ def open_file():
 
 def button_click():
     global words_array, selected_ssid
+    indicator = False
     selected_ssid = selected_option.get()
-    for password in words_array:
-        if connect_to_wifi(selected_ssid, password):
-            print("Connected to WiFi successfully!")
-            break
+    try:
+        for password in words_array:
+            if connect_to_wifi(ssid, password):
+                indicator = True
+                break
+        if (indicator == True):
+            messagebox.showinfo("WiFi Status", "Connected to WiFi successfully!")
         else:
-            print("Failed to connect to WiFi.")
+            messagebox.showerror("WiFi Status", "Failed to connect to WiFi.")
+    except NameError:
+        messagebox.showerror("WiFi Status", "No file selected.")
 
 # Create the main window
 root = tk.Tk()
