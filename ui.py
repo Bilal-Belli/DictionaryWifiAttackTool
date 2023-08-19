@@ -21,7 +21,7 @@ def button_click():
     selected_ssid = selected_option.get()
     try:
         for password in words_array:
-            if connect_to_wifi(ssid, password):
+            if connect_to_wifi(selected_ssid , password):
                 indicator = True
                 break
         if (indicator == True):
