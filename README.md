@@ -14,7 +14,7 @@ This repository presents a simple Python program for testing a large number of p
 ### For Testing
 - First, download or clone the repository.
 - Second, ensure that you have installed the required libraries and fixed dependencies (path).
-- Run the script 'ui.py'.
+- Run the script 'ui.py' ``python ui.py``.
 ### License
 This repository is licensed under the MIT License.
 ### For contributors
